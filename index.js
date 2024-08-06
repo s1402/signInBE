@@ -8,7 +8,7 @@ const app = express();
 const cors = require('cors');
 const {logger} = require('./config/createLogger');
 
-mongoose.connect("mongodb://0.0.0.0:27017/signindb").then(() => {
+mongoose.connect("mongodb+srv://shobhit:shivamMongodb@loginappcluster.jebqbar.mongodb.net/?retryWrites=true&w=majority&appName=LoginAppCluster").then(() => {
     logger.log("info","connected to  mongodb...");
 }).catch((err) => {
     logger.log("error",err.message);
